@@ -2,8 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CalendarDays, Clock, Languages, ArrowRight } from "lucide-react";
+import { CalendarDays, Clock, Languages, ArrowRight, BookOpenCheck } from "lucide-react";
 import { MODULES } from "@/lib/program-data";
+import flyerBibleFormation from "@/assets/flyer-bible-formation.jpg";
 
 export const Route = createFileRoute("/program")({
   head: () => ({
@@ -38,6 +39,38 @@ function Program() {
       </section>
 
       <section className="container mx-auto px-4 md:px-6 py-20">
+        <div className="mb-16 rounded-2xl border border-border/70 bg-card/80 p-6 md:p-8 shadow-soft">
+          <div className="grid gap-8 lg:grid-cols-2 items-center">
+            <img
+              src={flyerBibleFormation}
+              alt="Flyer Bible Formation Foundation and Mission School"
+              className="w-full rounded-xl border border-border/60 object-cover"
+            />
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Focus Formation</p>
+              <h2 className="mt-3 text-3xl md:text-4xl font-semibold">Bible Formation</h2>
+              <p className="mt-4 text-muted-foreground">
+                Grandir dans la foi, vivre la Parole et impacter le monde: un parcours suivi,
+                pratique et spirituel, pour bâtir une vie enracinée en Christ.
+              </p>
+              <div className="mt-6 space-y-3">
+                <div className="flex items-center gap-3 text-sm">
+                  <BookOpenCheck className="h-4 w-4 text-gold" />
+                  <span>Session régulière: mercredi à samedi</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <Clock className="h-4 w-4 text-gold" />
+                  <span>Horaire: à partir de 10h</span>
+                </div>
+                <div className="flex items-center gap-3 text-sm">
+                  <CalendarDays className="h-4 w-4 text-gold" />
+                  <span>Cycle complet: 12 mois</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="mb-12 text-center max-w-2xl mx-auto">
           <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Les 7 modules</p>
           <h2 className="mt-3 text-3xl md:text-5xl font-semibold">Cliquez sur chaque module pour le détail</h2>

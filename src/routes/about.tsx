@@ -88,15 +88,19 @@ function About() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 md:px-6 py-20 text-center max-w-2xl">
-        <blockquote className="font-serif text-2xl md:text-3xl italic text-foreground">
-          « Allez, faites de toutes les nations des disciples, les baptisant au nom du Père,
-          du Fils et du Saint-Esprit. »
-        </blockquote>
-        <p className="mt-4 text-sm text-gold uppercase tracking-widest">Matthieu 28 : 19</p>
-        <Button asChild size="lg" className="mt-10 bg-gradient-gold text-gold-foreground hover:opacity-90 shadow-gold">
-          <Link to="/register">Rejoindre la promotion 2026</Link>
-        </Button>
+      <section className="relative overflow-hidden py-24">
+        <img src={community} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+        <div className="container relative mx-auto px-4 md:px-6 text-center max-w-2xl">
+          <blockquote className="font-serif text-2xl md:text-3xl italic text-foreground">
+            « Allez, faites de toutes les nations des disciples, les baptisant au nom du Père,
+            du Fils et du Saint-Esprit. »
+          </blockquote>
+          <p className="mt-4 text-sm text-gold uppercase tracking-widest">Matthieu 28 : 19</p>
+          <Button asChild size="lg" className="mt-10 bg-gradient-gold text-gold-foreground hover:opacity-90 shadow-gold">
+            <Link to="/register">Rejoindre la promotion 2026</Link>
+          </Button>
+        </div>
       </section>
     </>
   );

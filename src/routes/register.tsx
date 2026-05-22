@@ -97,7 +97,7 @@ function Register() {
 
   return (
     <>
-      <section className="bg-gradient-hero bg-world-map text-primary-foreground py-16 md:py-24">
+      <section className="bg-gradient-hero-gold bg-world-map text-primary-foreground py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
           <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Inscription</p>
           <h1 className="mt-4 font-serif text-4xl md:text-5xl font-semibold">Rejoignez la promotion 2026</h1>

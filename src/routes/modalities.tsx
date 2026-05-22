@@ -37,24 +37,31 @@ function Modalities() {
       <section className="container mx-auto px-4 md:px-6 py-20">
         <div className="grid gap-6 md:grid-cols-2">
           {[
-            { icon: Building2, title: "Présentiel", text: "Sur place, en communion avec la promotion. Échanges directs, pratiques en groupe, prière collective.", features: ["Cours dispensés en salle", "Pratique pastorale en groupe", "Communion fraternelle", "Évaluations sur place"] },
-            { icon: Wifi, title: "En ligne", text: "Suivez la formation depuis n'importe où dans le monde. Cours en direct + replays + supports numériques.", features: ["Cours en direct et replay", "Supports numériques complets", "Suivi pédagogique à distance", "Évaluations en ligne"] },
+            { icon: Building2, image: studyGroup, title: "Présentiel", text: "Sur place, en communion avec la promotion. Échanges directs, pratiques en groupe, prière collective.", features: ["Cours dispensés en salle", "Pratique pastorale en groupe", "Communion fraternelle", "Évaluations sur place"] },
+            { icon: Wifi, image: studentsLaptop, title: "En ligne", text: "Suivez la formation depuis n'importe où dans le monde. Cours en direct + replays + supports numériques.", features: ["Cours en direct et replay", "Supports numériques complets", "Suivi pédagogique à distance", "Évaluations en ligne"] },
           ].map((f) => (
-            <Card key={f.title} className="p-8 border-border/60 hover:border-gold/40 hover:shadow-elegant transition-all">
-              <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-hero text-primary-foreground shadow-soft">
-                <f.icon className="h-7 w-7" />
+            <Card key={f.title} className="overflow-hidden border-border/60 hover:border-gold/40 hover:shadow-elegant transition-all">
+              <div className="relative h-48 overflow-hidden">
+                <img src={f.image} alt={f.title} className="h-full w-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                <div className="absolute bottom-4 left-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-hero text-primary-foreground shadow-gold">
+                  <f.icon className="h-6 w-6" />
+                </div>
               </div>
-              <h2 className="mt-6 font-serif text-2xl font-semibold">{f.title}</h2>
-              <p className="mt-3 text-sm text-muted-foreground">{f.text}</p>
-              <ul className="mt-6 space-y-2">
-                {f.features.map((t) => (
-                  <li key={t} className="flex gap-3 text-sm"><Check className="h-5 w-5 text-gold shrink-0" /> {t}</li>
-                ))}
-              </ul>
+              <div className="p-8 pt-6">
+                <h2 className="font-serif text-2xl font-semibold">{f.title}</h2>
+                <p className="mt-3 text-sm text-muted-foreground">{f.text}</p>
+                <ul className="mt-6 space-y-2">
+                  {f.features.map((t) => (
+                    <li key={t} className="flex gap-3 text-sm"><Check className="h-5 w-5 text-gold shrink-0" /><span>{t}</span></li>
+                  ))}
+                </ul>
+              </div>
             </Card>
           ))}
         </div>
       </section>
+
 
       <section className="bg-gradient-soft py-20">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">

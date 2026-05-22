@@ -5,6 +5,10 @@ import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import coverAll from "@/assets/cover-all.jpg";
 import worship from "@/assets/worship.jpg";
+import pillarFoundation from "@/assets/pillar-foundation.jpg";
+import pillarDiscipulat from "@/assets/pillar-discipulat.jpg";
+import pillarMission from "@/assets/pillar-mission.jpg";
+import pillarEvangelisation from "@/assets/pillar-evangelisation.jpg";
 // community image used elsewhere; keep import minimal
 import handsLight from "@/assets/hands-light.jpg";
 import logo from "@/assets/logo.jpg";
@@ -25,10 +29,10 @@ export const Route = createFileRoute("/")({
 });
 
 const pillars = [
-  { icon: BookOpen, title: "Fondation", text: "Bases solides de la foi chrétienne et de la Parole." },
-  { icon: HandHeart, title: "Discipulat", text: "Formation au caractère et à la maturité spirituelle." },
-  { icon: Globe2, title: "Mission", text: "Préparation à l'envoi parmi toutes les nations." },
-  { icon: GraduationCap, title: "Évangélisation", text: "Outils pratiques pour annoncer la Bonne Nouvelle." },
+  { icon: BookOpen, title: "Fondation", text: "Bases solides de la foi chretienne et de la Parole.", image: pillarFoundation },
+  { icon: HandHeart, title: "Discipulat", text: "Formation au caractere et a la maturite spirituelle.", image: pillarDiscipulat },
+  { icon: Globe2, title: "Mission", text: "Preparation a l'envoi parmi toutes les nations.", image: pillarMission },
+  { icon: GraduationCap, title: "Evangelisation", text: "Outils pratiques pour annoncer la Bonne Nouvelle.", image: pillarEvangelisation },
 ];
 
 function Home() {
@@ -75,12 +79,14 @@ function Home() {
         </div>
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {pillars.map((p) => (
-            <Card key={p.title} className="group p-7 border-border/60 hover:border-gold/50 hover:shadow-elegant transition-all">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-hero text-primary-foreground shadow-soft">
+            <Card key={p.title} className="group relative overflow-hidden p-7 border-border/60 hover:border-gold/50 hover:shadow-elegant transition-all min-h-[260px] text-primary-foreground">
+              <img src={p.image} alt="" className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/25 via-primary/55 to-background/85" />
+              <div className="relative inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-hero text-primary-foreground shadow-soft">
                 <p.icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-5 text-xl font-semibold">{p.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{p.text}</p>
+              <h3 className="relative mt-5 text-xl font-semibold">{p.title}</h3>
+              <p className="relative mt-2 text-sm text-primary-foreground/85">{p.text}</p>
             </Card>
           ))}
         </div>

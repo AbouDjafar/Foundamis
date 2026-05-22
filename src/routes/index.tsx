@@ -3,7 +3,10 @@ import { ArrowRight, BookOpen, Globe2, GraduationCap, HandHeart, Sparkles, Check
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import hero from "@/assets/hero.jpg";
+import cover from "@/assets/cover.jpg";
+import worship from "@/assets/worship.jpg";
+import community from "@/assets/community.jpg";
+import handsLight from "@/assets/hands-light.jpg";
 import logo from "@/assets/logo.jpg";
 import { MODULES, FEES, fmtXAF, fmtUSD } from "@/lib/program-data";
 

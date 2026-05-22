@@ -34,9 +34,9 @@ export function Footer() {
         <div>
           <h4 className="text-sm font-semibold text-gold mb-3 uppercase tracking-wider">Contact</h4>
           <ul className="space-y-3 text-sm text-primary-foreground/85">
-            <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 text-gold" /> contact@fms-jfan.org</li>
-            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 text-gold" /> +237 6XX XX XX XX</li>
-            <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 text-gold" /> Cameroun & en ligne</li>
+            <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 text-gold" /><span>contact@fms-jfan.org</span></li>
+            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 text-gold" /><span>+237 6XX XX XX XX</span></li>
+            <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 text-gold" /><span>Cameroun & en ligne</span></li>
           </ul>
         </div>
       </div>

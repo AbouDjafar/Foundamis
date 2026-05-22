@@ -2,6 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Target, Heart, Users, Compass } from "lucide-react";
+import community from "@/assets/community.jpg";
+import library from "@/assets/library.jpg";
+import prayer from "@/assets/prayer-family.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -33,7 +36,8 @@ function About() {
       </section>
 
       <section className="container mx-auto px-4 md:px-6 py-20">
-        <div className="grid gap-10 lg:grid-cols-2 items-start">
+        <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <img src={library} alt="Étudiants au travail" className="rounded-2xl shadow-elegant w-full object-cover aspect-[4/3]" />
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Notre vision</p>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold">Une armée de serviteurs pour toutes les nations</h2>
@@ -43,7 +47,9 @@ function About() {
               communautés vivantes, de discipliner et de transformer leur génération.
             </p>
           </div>
-          <div>
+        </div>
+        <div className="grid gap-12 lg:grid-cols-2 items-center mt-20">
+          <div className="order-2 lg:order-1">
             <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Notre mission</p>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold">Une école, sept modules, un envoi</h2>
             <p className="mt-5 text-muted-foreground">
@@ -52,11 +58,13 @@ function About() {
               chrétien : fondation, restauration, naissance, discipulat, dons, prière, envoi.
             </p>
           </div>
+          <img src={prayer} alt="Prière en famille" className="rounded-2xl shadow-elegant w-full object-cover aspect-[4/3] order-1 lg:order-2" />
         </div>
       </section>
 
       <section className="bg-gradient-soft py-20">
         <div className="container mx-auto px-4 md:px-6">
+
           <div className="text-center max-w-2xl mx-auto">
             <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Nos valeurs</p>
             <h2 className="mt-3 text-3xl md:text-5xl font-semibold">Ce qui nous guide</h2>
@@ -80,15 +88,19 @@ function About() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 md:px-6 py-20 text-center max-w-2xl">
-        <blockquote className="font-serif text-2xl md:text-3xl italic text-foreground">
-          « Allez, faites de toutes les nations des disciples, les baptisant au nom du Père,
-          du Fils et du Saint-Esprit. »
-        </blockquote>
-        <p className="mt-4 text-sm text-gold uppercase tracking-widest">Matthieu 28 : 19</p>
-        <Button asChild size="lg" className="mt-10 bg-gradient-gold text-gold-foreground hover:opacity-90 shadow-gold">
-          <Link to="/register">Rejoindre la promotion 2026</Link>
-        </Button>
+      <section className="relative overflow-hidden py-24">
+        <img src={community} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+        <div className="container relative mx-auto px-4 md:px-6 text-center max-w-2xl">
+          <blockquote className="font-serif text-2xl md:text-3xl italic text-foreground">
+            « Allez, faites de toutes les nations des disciples, les baptisant au nom du Père,
+            du Fils et du Saint-Esprit. »
+          </blockquote>
+          <p className="mt-4 text-sm text-gold uppercase tracking-widest">Matthieu 28 : 19</p>
+          <Button asChild size="lg" className="mt-10 bg-gradient-gold text-gold-foreground hover:opacity-90 shadow-gold">
+            <Link to="/register">Rejoindre la promotion 2026</Link>
+          </Button>
+        </div>
       </section>
     </>
   );

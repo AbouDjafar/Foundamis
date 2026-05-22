@@ -3,7 +3,10 @@ import { ArrowRight, BookOpen, Globe2, GraduationCap, HandHeart, Sparkles, Check
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import hero from "@/assets/hero.jpg";
+import cover from "@/assets/cover.jpg";
+import worship from "@/assets/worship.jpg";
+// community image used elsewhere; keep import minimal
+import handsLight from "@/assets/hands-light.jpg";
 import logo from "@/assets/logo.jpg";
 import { MODULES, FEES, fmtXAF, fmtUSD } from "@/lib/program-data";
 
@@ -33,9 +36,9 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-hero text-primary-foreground">
-        <div className="absolute inset-0 bg-world-map opacity-50" />
-        <img src={hero} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25 mix-blend-luminosity" width={1920} height={1280} />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/60 to-background/95" />
+        <div className="absolute inset-0 bg-world-map opacity-30" />
+        <img src={cover} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" width={1920} height={1280} />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/70 to-background" />
 
         <div className="container relative mx-auto px-4 md:px-6 py-24 md:py-36 text-center">
           <img src={logo} alt="Logo" className="mx-auto h-24 w-24 rounded-full ring-4 ring-gold/60 shadow-gold" />
@@ -111,6 +114,30 @@ function Home() {
         </div>
       </section>
 
+      {/* IMAGE FEATURE */}
+      <section className="container mx-auto px-4 md:px-6 py-20 md:py-28">
+        <div className="grid gap-10 lg:grid-cols-2 items-center">
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-gold opacity-20 blur-2xl rounded-3xl" />
+            <img src={worship} alt="Adoration et louange" className="relative rounded-2xl shadow-elegant w-full object-cover aspect-[4/3]" />
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Une vie consacrée</p>
+            <h2 className="mt-3 text-3xl md:text-5xl font-semibold">Rencontrer Dieu, servir les nations</h2>
+            <p className="mt-4 text-muted-foreground">
+              Au cœur de la formation : l'adoration, la prière et la Parole. Une école qui forme
+              le caractère autant que la connaissance, pour devenir un serviteur saint et envoyé.
+            </p>
+            <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+              <div className="rounded-xl border border-border bg-card/50 p-4"><p className="font-serif text-3xl text-gold font-bold">7</p><p className="text-xs text-muted-foreground mt-1">Modules</p></div>
+              <div className="rounded-xl border border-border bg-card/50 p-4"><p className="font-serif text-3xl text-gold font-bold">12</p><p className="text-xs text-muted-foreground mt-1">Mois</p></div>
+              <div className="rounded-xl border border-border bg-card/50 p-4"><p className="font-serif text-3xl text-gold font-bold">2</p><p className="text-xs text-muted-foreground mt-1">Langues</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* PRICING TEASER */}
       <section className="container mx-auto px-4 md:px-6 py-20 md:py-28">
         <div className="grid gap-10 lg:grid-cols-2 items-center">
@@ -144,7 +171,7 @@ function Home() {
               </div>
               <div className="flex items-baseline justify-between pt-2">
                 <span className="font-semibold">Total</span>
-                <span className="font-serif text-2xl text-primary font-bold">{fmtXAF(FEES.total.xaf)}<br/><span className="text-xs text-muted-foreground font-sans font-normal">≈ {fmtUSD(FEES.total.usd)}</span></span>
+                <span className="font-serif text-2xl text-gold font-bold">{fmtXAF(FEES.total.xaf)}<br/><span className="text-xs text-muted-foreground font-sans font-normal">≈ {fmtUSD(FEES.total.usd)}</span></span>
               </div>
             </div>
             <p className="mt-6 text-xs text-muted-foreground">Taux indicatif : 1 USD ≈ {FEES.rate} XAF.</p>
@@ -177,10 +204,12 @@ function Home() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-hero bg-world-map text-primary-foreground py-20 md:py-24">
-        <div className="container mx-auto px-4 md:px-6 text-center max-w-2xl">
+      <section className="relative overflow-hidden text-primary-foreground py-24 md:py-32">
+        <img src={handsLight} alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
+        <div className="container relative mx-auto px-4 md:px-6 text-center max-w-2xl">
           <h2 className="font-serif text-3xl md:text-5xl font-semibold">Répondez à l'appel.</h2>
-          <p className="mt-4 text-primary-foreground/85">Les inscriptions pour la promotion 2026 sont ouvertes. Rejoignez une communauté de disciples envoyés.</p>
+          <p className="mt-4 text-foreground/85">Les inscriptions pour la promotion 2026 sont ouvertes. Rejoignez une communauté de disciples envoyés.</p>
           <Button asChild size="lg" className="mt-8 bg-gradient-gold text-gold-foreground hover:opacity-90 shadow-gold">
             <Link to="/register">S'inscrire à la formation <ArrowRight className="ml-1 h-4 w-4" /></Link>
           </Button>

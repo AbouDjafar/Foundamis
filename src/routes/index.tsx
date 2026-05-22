@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import cover from "@/assets/cover.jpg";
 import worship from "@/assets/worship.jpg";
-import community from "@/assets/community.jpg";
+// community image used elsewhere; keep import minimal
 import handsLight from "@/assets/hands-light.jpg";
 import logo from "@/assets/logo.jpg";
 import { MODULES, FEES, fmtXAF, fmtUSD } from "@/lib/program-data";

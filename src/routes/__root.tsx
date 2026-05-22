@@ -6,6 +6,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { UserPlus } from "lucide-react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/sonner";
 import { Header } from "@/components/Header";
@@ -111,6 +112,13 @@ function RootComponent() {
         </main>
         <Footer />
       </div>
+      <Link
+        to="/register"
+        aria-label="S'inscrire à la formation"
+        className="register-fab-pulse fixed bottom-6 right-6 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-gradient-gold text-gold-foreground shadow-gold transition-transform hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+      >
+        <UserPlus className="h-6 w-6" />
+      </Link>
       <Toaster richColors position="top-center" />
     </QueryClientProvider>
   );

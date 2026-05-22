@@ -57,7 +57,7 @@ function Home() {
             <Button asChild size="lg" className="bg-gradient-gold text-gold-foreground hover:opacity-90 shadow-gold">
               <Link to="/register">S'inscrire maintenant <ArrowRight className="ml-1 h-4 w-4" /></Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 bg-background/10 text-primary-foreground hover:bg-background/20 hover:text-primary-foreground">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft">
               <Link to="/program">Voir le programme</Link>
             </Button>
           </div>

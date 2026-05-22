@@ -23,7 +23,7 @@ export const Route = createFileRoute("/program")({
 function Program() {
   return (
     <>
-      <section className="bg-gradient-hero-gold bg-world-map text-primary-foreground py-20 md:py-28">
+      <section className="bg-gradient-cover-dark bg-world-map text-primary-foreground py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
           <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Programme</p>
           <h1 className="mt-4 font-serif text-4xl md:text-6xl font-semibold">Une année pour être formé et envoyé</h1>

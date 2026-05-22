@@ -2,6 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Target, Heart, Users, Compass } from "lucide-react";
+import community from "@/assets/community.jpg";
+import library from "@/assets/library.jpg";
+import prayer from "@/assets/prayer-family.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({

@@ -36,7 +36,8 @@ function About() {
       </section>
 
       <section className="container mx-auto px-4 md:px-6 py-20">
-        <div className="grid gap-10 lg:grid-cols-2 items-start">
+        <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <img src={library} alt="Étudiants au travail" className="rounded-2xl shadow-elegant w-full object-cover aspect-[4/3]" />
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Notre vision</p>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold">Une armée de serviteurs pour toutes les nations</h2>
@@ -46,7 +47,9 @@ function About() {
               communautés vivantes, de discipliner et de transformer leur génération.
             </p>
           </div>
-          <div>
+        </div>
+        <div className="grid gap-12 lg:grid-cols-2 items-center mt-20">
+          <div className="order-2 lg:order-1">
             <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Notre mission</p>
             <h2 className="mt-3 text-3xl md:text-4xl font-semibold">Une école, sept modules, un envoi</h2>
             <p className="mt-5 text-muted-foreground">
@@ -55,11 +58,13 @@ function About() {
               chrétien : fondation, restauration, naissance, discipulat, dons, prière, envoi.
             </p>
           </div>
+          <img src={prayer} alt="Prière en famille" className="rounded-2xl shadow-elegant w-full object-cover aspect-[4/3] order-1 lg:order-2" />
         </div>
       </section>
 
       <section className="bg-gradient-soft py-20">
         <div className="container mx-auto px-4 md:px-6">
+
           <div className="text-center max-w-2xl mx-auto">
             <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Nos valeurs</p>
             <h2 className="mt-3 text-3xl md:text-5xl font-semibold">Ce qui nous guide</h2>

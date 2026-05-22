@@ -14,6 +14,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MODULES, FEES, fmtXAF, fmtUSD } from "@/lib/program-data";
+import coverAll from "@/assets/cover-all.jpg";
 
 export const Route = createFileRoute("/register")({
   head: () => ({
@@ -97,8 +98,10 @@ function Register() {
 
   return (
     <>
-      <section className="bg-gradient-cover-dark bg-world-map text-primary-foreground py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
+      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-primary-foreground py-16 md:py-24">
+        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" width={1920} height={1280} />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/45 to-primary/65" />
+        <div className="relative container mx-auto px-4 md:px-6 text-center max-w-3xl">
           <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Inscription</p>
           <h1 className="mt-4 font-serif text-4xl md:text-5xl font-semibold">Rejoignez la promotion 2026</h1>
           <p className="mt-4 text-primary-foreground/85">Complétez le formulaire ci-dessous. Notre équipe vous contactera sous 48h.</p>

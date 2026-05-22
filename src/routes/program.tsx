@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { CalendarDays, Clock, Languages, ArrowRight, BookOpenCheck } from "lucide-react";
 import { MODULES } from "@/lib/program-data";
 import flyerBibleFormation from "@/assets/flyer-bible-formation.jpg";
+import coverAll from "@/assets/cover-all.jpg";
 
 export const Route = createFileRoute("/program")({
   head: () => ({
@@ -23,8 +24,10 @@ export const Route = createFileRoute("/program")({
 function Program() {
   return (
     <>
-      <section className="bg-gradient-cover-dark bg-world-map text-primary-foreground py-20 md:py-28">
-        <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
+      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-primary-foreground py-20 md:py-28">
+        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" width={1920} height={1280} />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/45 to-primary/65" />
+        <div className="relative container mx-auto px-4 md:px-6 text-center max-w-3xl">
           <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Programme</p>
           <h1 className="mt-4 font-serif text-4xl md:text-6xl font-semibold">Une année pour être formé et envoyé</h1>
           <p className="mt-6 text-primary-foreground/85">

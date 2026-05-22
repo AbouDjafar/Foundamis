@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import coverAll from "@/assets/cover-all.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -43,8 +44,10 @@ function Contact() {
 
   return (
     <>
-      <section className="bg-gradient-cover-dark bg-world-map text-primary-foreground py-20 md:py-28">
-        <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
+      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-primary-foreground py-20 md:py-28">
+        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" width={1920} height={1280} />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/45 to-primary/65" />
+        <div className="relative container mx-auto px-4 md:px-6 text-center max-w-3xl">
           <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Contact</p>
           <h1 className="mt-4 font-serif text-4xl md:text-6xl font-semibold">Parlons ensemble</h1>
           <p className="mt-6 text-primary-foreground/85">Une question, un partenariat, un témoignage — nous serions ravis de vous lire.</p>

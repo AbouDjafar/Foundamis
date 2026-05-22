@@ -36,9 +36,9 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-hero text-primary-foreground">
-        <div className="absolute inset-0 bg-world-map opacity-50" />
-        <img src={hero} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25 mix-blend-luminosity" width={1920} height={1280} />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/60 to-background/95" />
+        <div className="absolute inset-0 bg-world-map opacity-30" />
+        <img src={cover} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" width={1920} height={1280} />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/70 to-background" />
 
         <div className="container relative mx-auto px-4 md:px-6 py-24 md:py-36 text-center">
           <img src={logo} alt="Logo" className="mx-auto h-24 w-24 rounded-full ring-4 ring-gold/60 shadow-gold" />

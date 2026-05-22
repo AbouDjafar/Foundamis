@@ -3,6 +3,9 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Building2, Wifi, Check, ArrowRight } from "lucide-react";
 import { FEES, fmtXAF, fmtUSD } from "@/lib/program-data";
+import studyGroup from "@/assets/study-group.jpg";
+import studentsLaptop from "@/assets/students-laptop.jpg";
+import bibleGrass from "@/assets/bible-grass.jpg";
 
 export const Route = createFileRoute("/modalities")({
   head: () => ({

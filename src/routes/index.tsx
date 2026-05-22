@@ -171,7 +171,7 @@ function Home() {
               </div>
               <div className="flex items-baseline justify-between pt-2">
                 <span className="font-semibold">Total</span>
-                <span className="font-serif text-2xl text-primary font-bold">{fmtXAF(FEES.total.xaf)}<br/><span className="text-xs text-muted-foreground font-sans font-normal">≈ {fmtUSD(FEES.total.usd)}</span></span>
+                <span className="font-serif text-2xl text-gold font-bold">{fmtXAF(FEES.total.xaf)}<br/><span className="text-xs text-muted-foreground font-sans font-normal">≈ {fmtUSD(FEES.total.usd)}</span></span>
               </div>
             </div>
             <p className="mt-6 text-xs text-muted-foreground">Taux indicatif : 1 USD ≈ {FEES.rate} XAF.</p>

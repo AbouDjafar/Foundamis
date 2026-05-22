@@ -77,19 +77,19 @@ function Modalities() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             <Card className="p-7 border-border/60">
               <p className="text-xs uppercase tracking-widest text-muted-foreground">Inscription</p>
-              <p className="mt-4 font-serif text-3xl font-bold text-primary">{fmtXAF(FEES.registration.xaf)}</p>
+              <p className="mt-4 font-serif text-3xl font-bold text-gold">{fmtXAF(FEES.registration.xaf)}</p>
               <p className="mt-1 text-sm text-muted-foreground">≈ {fmtUSD(FEES.registration.usd)}</p>
               <p className="mt-4 text-xs text-muted-foreground">À régler à la confirmation de l'inscription.</p>
             </Card>
             <Card className="p-7 border-border/60">
               <p className="text-xs uppercase tracking-widest text-muted-foreground">Formation</p>
-              <p className="mt-4 font-serif text-3xl font-bold text-primary">{fmtXAF(FEES.training.xaf)}</p>
+              <p className="mt-4 font-serif text-3xl font-bold text-gold">{fmtXAF(FEES.training.xaf)}</p>
               <p className="mt-1 text-sm text-muted-foreground">≈ {fmtUSD(FEES.training.usd)}</p>
               <p className="mt-4 text-xs text-muted-foreground">Couvre les 7 modules sur 12 mois.</p>
             </Card>
             <Card className="p-7 border-gold/40 bg-gradient-to-br from-card to-accent/30 shadow-elegant">
               <p className="text-xs uppercase tracking-widest text-gold">Total</p>
-              <p className="mt-4 font-serif text-3xl font-bold text-primary">{fmtXAF(FEES.total.xaf)}</p>
+              <p className="mt-4 font-serif text-3xl font-bold text-gold">{fmtXAF(FEES.total.xaf)}</p>
               <p className="mt-1 text-sm text-muted-foreground">≈ {fmtUSD(FEES.total.usd)}</p>
               <p className="mt-4 text-xs text-muted-foreground">Échelonnement possible — nous contacter.</p>
             </Card>

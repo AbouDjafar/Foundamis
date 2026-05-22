@@ -260,7 +260,7 @@ function Register() {
                 <div className="flex justify-between pt-3">
                   <span className="font-semibold">Total</span>
                   <div className="text-right">
-                    <div className="font-serif text-xl font-bold text-primary">{fmtXAF(FEES.total.xaf)}</div>
+                    <div className="font-serif text-xl font-bold text-gold">{fmtXAF(FEES.total.xaf)}</div>
                     <div className="text-xs text-muted-foreground">≈ {fmtUSD(FEES.total.usd)}</div>
                   </div>
                 </div>

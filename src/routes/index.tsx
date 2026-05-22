@@ -204,10 +204,12 @@ function Home() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-hero bg-world-map text-primary-foreground py-20 md:py-24">
-        <div className="container mx-auto px-4 md:px-6 text-center max-w-2xl">
+      <section className="relative overflow-hidden text-primary-foreground py-24 md:py-32">
+        <img src={handsLight} alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40" />
+        <div className="container relative mx-auto px-4 md:px-6 text-center max-w-2xl">
           <h2 className="font-serif text-3xl md:text-5xl font-semibold">Répondez à l'appel.</h2>
-          <p className="mt-4 text-primary-foreground/85">Les inscriptions pour la promotion 2026 sont ouvertes. Rejoignez une communauté de disciples envoyés.</p>
+          <p className="mt-4 text-foreground/85">Les inscriptions pour la promotion 2026 sont ouvertes. Rejoignez une communauté de disciples envoyés.</p>
           <Button asChild size="lg" className="mt-8 bg-gradient-gold text-gold-foreground hover:opacity-90 shadow-gold">
             <Link to="/register">S'inscrire à la formation <ArrowRight className="ml-1 h-4 w-4" /></Link>
           </Button>

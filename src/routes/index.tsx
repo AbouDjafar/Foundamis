@@ -8,7 +8,7 @@ import worship from "@/assets/worship.jpg";
 import pillarFoundation from "@/assets/pillar-foundation.jpg";
 import pillarDiscipulat from "@/assets/pillar-discipulat.jpg";
 import pillarMission from "@/assets/pillar-mission.jpg";
-import pillarEvangelisation from "@/assets/pillar-evangelisation.jpg";
+import flyerEvangile from "@/assets/flyer-evangile.jpg";
 // community image used elsewhere; keep import minimal
 import handsLight from "@/assets/hands-light.jpg";
 import logo from "@/assets/logo.jpg";
@@ -32,7 +32,7 @@ const pillars = [
   { icon: BookOpen, title: "Fondation", text: "Bases solides de la foi chretienne et de la Parole.", image: pillarFoundation },
   { icon: HandHeart, title: "Discipulat", text: "Formation au caractere et a la maturite spirituelle.", image: pillarDiscipulat },
   { icon: Globe2, title: "Mission", text: "Preparation a l'envoi parmi toutes les nations.", image: pillarMission },
-  { icon: GraduationCap, title: "Evangelisation", text: "Outils pratiques pour annoncer la Bonne Nouvelle.", image: pillarEvangelisation },
+  { icon: GraduationCap, title: "Evangelisation", text: "Outils pratiques pour annoncer la Bonne Nouvelle.", image: flyerEvangile },
 ];
 
 function Home() {

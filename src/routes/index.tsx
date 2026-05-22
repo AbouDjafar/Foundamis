@@ -114,6 +114,30 @@ function Home() {
         </div>
       </section>
 
+      {/* IMAGE FEATURE */}
+      <section className="container mx-auto px-4 md:px-6 py-20 md:py-28">
+        <div className="grid gap-10 lg:grid-cols-2 items-center">
+          <div className="relative">
+            <div className="absolute -inset-4 bg-gradient-gold opacity-20 blur-2xl rounded-3xl" />
+            <img src={worship} alt="Adoration et louange" className="relative rounded-2xl shadow-elegant w-full object-cover aspect-[4/3]" />
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Une vie consacrée</p>
+            <h2 className="mt-3 text-3xl md:text-5xl font-semibold">Rencontrer Dieu, servir les nations</h2>
+            <p className="mt-4 text-muted-foreground">
+              Au cœur de la formation : l'adoration, la prière et la Parole. Une école qui forme
+              le caractère autant que la connaissance, pour devenir un serviteur saint et envoyé.
+            </p>
+            <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+              <div className="rounded-xl border border-border bg-card/50 p-4"><p className="font-serif text-3xl text-gold font-bold">7</p><p className="text-xs text-muted-foreground mt-1">Modules</p></div>
+              <div className="rounded-xl border border-border bg-card/50 p-4"><p className="font-serif text-3xl text-gold font-bold">12</p><p className="text-xs text-muted-foreground mt-1">Mois</p></div>
+              <div className="rounded-xl border border-border bg-card/50 p-4"><p className="font-serif text-3xl text-gold font-bold">2</p><p className="text-xs text-muted-foreground mt-1">Langues</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* PRICING TEASER */}
       <section className="container mx-auto px-4 md:px-6 py-20 md:py-28">
         <div className="grid gap-10 lg:grid-cols-2 items-center">

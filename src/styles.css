@@ -130,6 +130,7 @@
   .bg-gradient-hero { background: var(--gradient-hero); }
   .bg-gradient-gold { background: var(--gradient-gold); }
   .bg-gradient-soft { background: var(--gradient-soft); }
+  .bg-gradient-deep { background: var(--gradient-deep); }
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
   .shadow-gold { box-shadow: var(--shadow-gold); }

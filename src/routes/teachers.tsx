@@ -127,6 +127,14 @@ function TeachersPage() {
       </section>
 
       <section className="container mx-auto px-4 md:px-6 py-16 md:py-20">
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Introduction</p>
+          <h2 className="mt-3 text-3xl md:text-4xl font-semibold">Une equipe complementaire au service de la formation</h2>
+          <p className="mt-4 text-muted-foreground">
+            Cette page presente les profils des enseignants qui portent les modules de la formation. Chaque intervenant apporte une sensibilite particuliere
+            afin d'unir fondements bibliques, experience pratique du ministere et accompagnement spirituel des etudiants.
+          </p>
+        </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {teachers.map((teacher) => (
             <Card key={teacher.name} className="overflow-hidden border-gold/30 bg-gradient-to-b from-card to-accent/25 shadow-soft">

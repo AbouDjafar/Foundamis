@@ -63,7 +63,7 @@ function Contact() {
               { icon: MapPin, label: "Localisation", value: "Cameroun & en ligne" },
             ].map((c) => (
               <Card key={c.label} className="p-5 border-border/60 flex gap-4 items-start">
-                <div className="h-10 w-10 rounded-lg bg-gradient-hero text-[#10284d] inline-flex items-center justify-center shrink-0">
+                <div className="h-10 w-10 rounded-lg bg-gradient-hero text-primary-foreground inline-flex items-center justify-center shrink-0">
                   <c.icon className="h-5 w-5" />
                 </div>
                 <div>

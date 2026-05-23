@@ -117,7 +117,7 @@ function About() {
               { icon: Compass, title: "Mission", text: "Aller vers ceux qui ne connaissent pas Jésus." },
             ].map((v) => (
               <Card key={v.title} className="p-7 border-border/60 hover:border-gold/40 hover:shadow-soft transition-all">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-hero text-[#10284d]">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-hero text-primary-foreground">
                   <v.icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-5 text-xl font-semibold">{v.title}</h3>

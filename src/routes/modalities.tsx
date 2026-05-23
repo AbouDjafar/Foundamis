@@ -47,7 +47,7 @@ function Modalities() {
               <div className="relative h-48 overflow-hidden">
                 <img src={f.image} alt={f.title} className="h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
-                <div className="absolute bottom-4 left-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-hero text-[#10284d] shadow-gold">
+                <div className="absolute bottom-4 left-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-hero text-primary-foreground shadow-gold">
                   <f.icon className="h-6 w-6" />
                 </div>
               </div>

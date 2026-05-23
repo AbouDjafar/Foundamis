@@ -12,7 +12,7 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <img src={logo} alt="" className="h-12 w-12 rounded-full ring-2 ring-gold/50" />
             <div>
-              <div className="font-serif text-lg font-semibold">Foundation and Mission School International</div>
+              <div className="font-serif text-lg font-semibold">International Foundation and Mission School</div>
               <div className="text-xs uppercase tracking-[0.2em] text-gold">Jesus For All Nations</div>
             </div>
           </div>
@@ -55,7 +55,7 @@ export function Footer() {
 
       <div className="relative z-10 border-t border-primary-foreground/20">
         <div className="container mx-auto flex flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-primary-foreground/70 md:flex-row md:px-6">
-          <p>© {new Date().getFullYear()} Foundation and Mission School International. Tous droits reserves.</p>
+          <p>© {new Date().getFullYear()} International Foundation and Mission School. Tous droits reserves.</p>
           <p className="italic">Allez, faites de toutes les nations des disciples - Matt. 28:19</p>
         </div>
         <div className="container mx-auto px-4 pb-5 text-center text-xs text-primary-foreground/70 md:px-6">

@@ -14,9 +14,9 @@ import coverAll from "@/assets/cover-all.jpg";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Foundation and Mission School International" },
+      { title: "Contact — International Foundation and Mission School" },
       { name: "description", content: "Une question sur la formation ? Contactez notre équipe." },
-      { property: "og:title", content: "Contact — Foundation and Mission School International" },
+      { property: "og:title", content: "Contact — International Foundation and Mission School" },
       { property: "og:description", content: "Écrivez-nous, nous vous répondons sous 48h." },
       { property: "og:url", content: "/contact" },
     ],

@@ -17,9 +17,9 @@ import { MODULES, FEES, fmtXAF, fmtUSD } from "@/lib/program-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Foundation and Mission School International — Jesus For All Nations" },
+      { title: "International Foundation and Mission School — Jesus For All Nations" },
       { name: "description", content: "École biblique de formation chrétienne et missionnaire. 7 modules, Février 2026 – Janvier 2027. Présentiel ou en ligne, en français et anglais." },
-      { property: "og:title", content: "Foundation and Mission School International — Jesus For All Nations" },
+      { property: "og:title", content: "International Foundation and Mission School — Jesus For All Nations" },
       { property: "og:description", content: "Une formation biblique complète pour servir Christ parmi toutes les nations." },
       { property: "og:url", content: "/" },
     ],
@@ -50,7 +50,7 @@ function Home() {
             <Sparkles className="h-3 w-3" /> Promotion 2026 — 2027
           </span>
           <h1 className="mt-6 font-serif text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] max-w-4xl mx-auto">
-            Foundation and Mission School International
+            International Foundation and Mission School
           </h1>
           <p className="mt-4 text-base md:text-lg text-[#10284d]/90 italic">« Jesus For All Nations »</p>
           <p className="mt-6 max-w-2xl mx-auto text-base md:text-lg text-[#10284d]/90">

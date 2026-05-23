@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { BookCheck, Languages, UserRound } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import bakalag from "@/assets/bakalag.png";
 import coverAll from "@/assets/cover-all.jpg";
 
 type Teacher = {
@@ -11,9 +12,20 @@ type Teacher = {
   competencies: string[];
   modules: string[];
   languages: string[];
+  image?: string;
 };
 
 const teachers: Teacher[] = [
+  {
+    name: "Rev. Dr. Apo. Fond. YONGA BAKALAG",
+    role: "Fondateur et enseignant principal",
+    title: "Vision, fondements bibliques et gouvernance du ministere",
+    bio: "Serviteur de Dieu engage dans la formation, il porte une vision de fondation, de mission et d'envoi afin de preparer des disciples solides pour les nations.",
+    competencies: ["Leadership chretien", "Vision strategique", "Theologie biblique", "Formation de formateurs"],
+    modules: ["Fondements de la Foi Chretienne", "Dons & Appels"],
+    languages: ["Francais", "English"],
+    image: bakalag,
+  },
   {
     name: "Pasteur Daniel Mvondo",
     role: "Enseignant principal",
@@ -77,22 +89,13 @@ const teachers: Teacher[] = [
     modules: ["Nouvelle Naissance", "Formation Finale du Chretien"],
     languages: ["Francais", "English"],
   },
-  {
-    name: "Dr David Bakala",
-    role: "Enseignant principal",
-    title: "Vision globale et gouvernance du ministere",
-    bio: "Il apporte une vision structurante de la formation, de la mission et du leadership afin de preparer des serviteurs durables.",
-    competencies: ["Leadership chretien", "Vision strategique", "Gouvernance", "Formation de formateurs"],
-    modules: ["Restauration & Renouvellement", "Dons & Appels"],
-    languages: ["Francais", "English"],
-  },
 ];
 
 export const Route = createFileRoute("/teachers")({
   head: () => ({
     meta: [
-      { title: "Profils des enseignants — Foundation and Mission School International" },
-      { name: "description", content: "Decouvrez les enseignants de Foundation and Mission School International et leurs domaines de competence." },
+      { title: "Profils des enseignants â€” International Foundation and Mission School" },
+      { name: "description", content: "Decouvrez les enseignants de International Foundation and Mission School et leurs domaines de competence." },
       { property: "og:title", content: "Profils des enseignants" },
       { property: "og:description", content: "Une equipe de formateurs au service de la formation biblique et missionnaire." },
       { property: "og:url", content: "/teachers" },
@@ -140,9 +143,17 @@ function TeachersPage() {
             <Card key={teacher.name} className="overflow-hidden border-gold/30 bg-gradient-to-b from-card to-accent/25 shadow-soft">
               <div className="border-b border-gold/20 bg-gradient-to-r from-primary/10 to-gold/10 p-6">
                 <div className="flex items-start gap-4">
-                  <div className="inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-gold/60 bg-gradient-hero text-primary-foreground font-serif text-lg font-bold">
-                    {initials(teacher.name)}
-                  </div>
+                  {teacher.image ? (
+                    <img
+                      src={teacher.image}
+                      alt={teacher.name}
+                      className="h-16 w-16 rounded-full border-2 border-gold/60 bg-card object-cover object-top shadow-soft"
+                    />
+                  ) : (
+                    <div className="inline-flex h-14 w-14 items-center justify-center rounded-full border-2 border-gold/60 bg-gradient-hero text-primary-foreground font-serif text-lg font-bold">
+                      {initials(teacher.name)}
+                    </div>
+                  )}
                   <div>
                     <p className="inline-flex rounded-sm bg-gold/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-primary">
                       {teacher.role}

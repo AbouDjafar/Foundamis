@@ -59,10 +59,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Foundation and Mission School International — Jesus For All Nations" },
-      { name: "description", content: "École biblique Foundation and Mission School International : formation chrétienne, mission et discipulat. Présentiel et en ligne, Français & Anglais." },
-      { name: "author", content: "Foundation and Mission School International" },
-      { property: "og:site_name", content: "Foundation and Mission School International" },
+      { title: "International Foundation and Mission School — Jesus For All Nations" },
+      { name: "description", content: "École biblique International Foundation and Mission School : formation chrétienne, mission et discipulat. Présentiel et en ligne, Français & Anglais." },
+      { name: "author", content: "International Foundation and Mission School" },
+      { property: "og:site_name", content: "International Foundation and Mission School" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -80,7 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "EducationalOrganization",
-        name: "Foundation and Mission School International",
+        name: "International Foundation and Mission School",
         alternateName: "Jesus For All Nations",
         description: "École biblique de formation et de mission chrétienne",
       }),

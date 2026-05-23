@@ -19,7 +19,7 @@ import coverAll from "@/assets/cover-all.jpg";
 export const Route = createFileRoute("/register")({
   head: () => ({
     meta: [
-      { title: "Inscription — Foundation and Mission School International" },
+      { title: "Inscription — International Foundation and Mission School" },
       { name: "description", content: "Inscrivez-vous à la formation 2026-2027, en présentiel ou en ligne." },
       { property: "og:title", content: "Inscription à la formation" },
       { property: "og:description", content: "Formulaire d'inscription — présentiel ou en ligne." },

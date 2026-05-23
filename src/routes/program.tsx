@@ -10,7 +10,7 @@ import coverAll from "@/assets/cover-all.jpg";
 export const Route = createFileRoute("/program")({
   head: () => ({
     meta: [
-      { title: "Programme 2026 — 2027 — Foundation and Mission School International" },
+      { title: "Programme 2026 — 2027 — International Foundation and Mission School" },
       { name: "description", content: "Découvrez les 7 modules de la formation : Fondation, Restauration, Nouvelle Naissance, Discipulat, Dons, Mission, Envoi. Février 2026 — Janvier 2027." },
       { property: "og:title", content: "Programme 2026 — 2027" },
       { property: "og:description", content: "Sept modules sur douze mois pour devenir un serviteur formé et envoyé." },
@@ -47,7 +47,7 @@ function Program() {
           <div className="grid gap-8 lg:grid-cols-2 items-center">
             <img
               src={flyerBibleFormation}
-              alt="Flyer Bible Formation Foundation and Mission School International"
+              alt="Flyer Bible Formation International Foundation and Mission School"
               className="w-full rounded-xl border border-border/60 object-cover"
             />
             <div>

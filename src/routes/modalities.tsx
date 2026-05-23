@@ -11,7 +11,7 @@ import coverAll from "@/assets/cover-all.jpg";
 export const Route = createFileRoute("/modalities")({
   head: () => ({
     meta: [
-      { title: "Modalités & Tarifs — Foundation and Mission School International" },
+      { title: "Modalités & Tarifs — International Foundation and Mission School" },
       { name: "description", content: "Formation présentielle ou en ligne. Inscription 25 000 XAF (~42 USD), formation 75 000 XAF (~125 USD). Total 100 000 XAF (~167 USD)." },
       { property: "og:title", content: "Modalités & Tarifs" },
       { property: "og:description", content: "Présentiel ou en ligne — tarifs détaillés." },

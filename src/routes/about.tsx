@@ -11,9 +11,9 @@ import coverAll from "@/assets/cover-all.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "À propos — Foundation and Mission School International" },
-      { name: "description", content: "Vision, mission et valeurs de Foundation and Mission School International « Jesus For All Nations »." },
-      { property: "og:title", content: "À propos — Foundation and Mission School International" },
+      { title: "À propos — International Foundation and Mission School" },
+      { name: "description", content: "Vision, mission et valeurs de International Foundation and Mission School « Jesus For All Nations »." },
+      { property: "og:title", content: "À propos — International Foundation and Mission School" },
       { property: "og:description", content: "Une école biblique au service de la mission auprès de toutes les nations." },
       { property: "og:url", content: "/about" },
     ],
@@ -32,7 +32,7 @@ function About() {
           <p className="text-xs uppercase tracking-[0.25em] text-[#10284d] font-semibold">À propos</p>
           <h1 className="mt-4 font-serif text-4xl md:text-6xl font-semibold">Former. Équiper. Envoyer.</h1>
           <p className="mt-6 text-[#10284d]/90">
-            Foundation and Mission School International est une école biblique née d'un appel : préparer une génération
+            International Foundation and Mission School est une école biblique née d'un appel : préparer une génération
             de disciples solidement ancrés dans la Parole de Dieu, animés par l'amour de Christ
             et prêts à porter l'Évangile vers toutes les nations.
           </p>
@@ -95,7 +95,7 @@ function About() {
             </div>
             <img
               src={flyerEvangile}
-              alt="Flyer évangélisation Foundation and Mission School International"
+              alt="Flyer évangélisation International Foundation and Mission School"
               className="w-full rounded-2xl border border-border/70 shadow-elegant object-cover"
             />
           </div>

@@ -86,7 +86,7 @@ function Home() {
                 <p.icon className="h-6 w-6" />
               </div>
               <h3 className="relative mt-5 text-xl font-semibold">{p.title}</h3>
-              <p className="relative mt-2 text-sm text-[#10284d]/90">{p.text}</p>
+              <p className="relative mt-2 text-sm text-primary-foreground/90">{p.text}</p>
             </Card>
           ))}
         </div>

@@ -17,9 +17,9 @@ import { MODULES, FEES, fmtXAF, fmtUSD } from "@/lib/program-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Foundation and Mission School — Jesus For All Nations" },
+      { title: "Foundation and Mission School International — Jesus For All Nations" },
       { name: "description", content: "École biblique de formation chrétienne et missionnaire. 7 modules, Février 2026 – Janvier 2027. Présentiel ou en ligne, en français et anglais." },
-      { property: "og:title", content: "Foundation and Mission School — Jesus For All Nations" },
+      { property: "og:title", content: "Foundation and Mission School International — Jesus For All Nations" },
       { property: "og:description", content: "Une formation biblique complète pour servir Christ parmi toutes les nations." },
       { property: "og:url", content: "/" },
     ],
@@ -39,21 +39,21 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-gradient-hero text-primary-foreground">
-        <div className="absolute inset-0 bg-world-map opacity-30" />
-        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" width={1920} height={1280} />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/70 to-background" />
+      <section className="relative overflow-hidden bg-gradient-hero text-[#10284d]">
+        <div className="absolute inset-0 bg-world-map opacity-10" />
+        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1280} />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/8 via-transparent to-white/18" />
 
         <div className="container relative mx-auto px-4 md:px-6 py-24 md:py-36 text-center">
           <img src={logo} alt="Logo" className="mx-auto h-24 w-24 rounded-full ring-4 ring-gold/60 shadow-gold" />
-          <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-background/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold backdrop-blur">
+          <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-white/65 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-[#10284d]">
             <Sparkles className="h-3 w-3" /> Promotion 2026 — 2027
           </span>
           <h1 className="mt-6 font-serif text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] max-w-4xl mx-auto">
-            Foundation <span className="text-gold">&</span> Mission School
+            Foundation and Mission School International
           </h1>
-          <p className="mt-4 text-base md:text-lg text-primary-foreground/85 italic">« Jesus For All Nations »</p>
-          <p className="mt-6 max-w-2xl mx-auto text-base md:text-lg text-primary-foreground/85">
+          <p className="mt-4 text-base md:text-lg text-[#10284d]/90 italic">« Jesus For All Nations »</p>
+          <p className="mt-6 max-w-2xl mx-auto text-base md:text-lg text-[#10284d]/90">
             Une école biblique d'un an pour bâtir des disciples enracinés dans la Parole,
             équipés pour la mission et envoyés vers toutes les nations.
           </p>
@@ -86,7 +86,7 @@ function Home() {
                 <p.icon className="h-6 w-6" />
               </div>
               <h3 className="relative mt-5 text-xl font-semibold">{p.title}</h3>
-              <p className="relative mt-2 text-sm text-primary-foreground/85">{p.text}</p>
+              <p className="relative mt-2 text-sm text-[#10284d]/90">{p.text}</p>
             </Card>
           ))}
         </div>
@@ -99,6 +99,7 @@ function Home() {
             <div className="max-w-xl">
               <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Programme 2026 — 2027</p>
               <h2 className="mt-3 text-3xl md:text-5xl font-semibold">7 modules. 1 an. Toute une vocation.</h2>
+              <p className="mt-3 text-sm text-muted-foreground">Chaque module dure 1 mois et est porte par 2 enseignants.</p>
             </div>
             <Button asChild variant="outline" className="border-primary/30 self-start md:self-end">
               <Link to="/program">Programme complet <ArrowRight className="ml-1 h-4 w-4" /></Link>
@@ -113,7 +114,7 @@ function Home() {
                 </div>
                 <h3 className="mt-3 text-lg font-semibold leading-snug">{m.title}</h3>
                 <p className="mt-1 text-xs text-muted-foreground">{m.period}</p>
-                <p className="mt-4 text-sm text-muted-foreground">{m.courses.length} cours · {m.languages}</p>
+                <p className="mt-4 text-sm text-muted-foreground">{m.courses.length} cours - {m.languages} - 2 enseignants</p>
               </Card>
             ))}
           </div>

@@ -14,9 +14,9 @@ import coverAll from "@/assets/cover-all.jpg";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Foundation and Mission School" },
+      { title: "Contact — Foundation and Mission School International" },
       { name: "description", content: "Une question sur la formation ? Contactez notre équipe." },
-      { property: "og:title", content: "Contact — Foundation and Mission School" },
+      { property: "og:title", content: "Contact — Foundation and Mission School International" },
       { property: "og:description", content: "Écrivez-nous, nous vous répondons sous 48h." },
       { property: "og:url", content: "/contact" },
     ],
@@ -44,13 +44,13 @@ function Contact() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-primary-foreground py-20 md:py-28">
-        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" width={1920} height={1280} />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/45 to-primary/65" />
+      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-[#10284d] py-20 md:py-28">
+        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1280} />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/12 via-white/8 to-white/16" />
         <div className="relative container mx-auto px-4 md:px-6 text-center max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Contact</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#10284d] font-semibold">Contact</p>
           <h1 className="mt-4 font-serif text-4xl md:text-6xl font-semibold">Parlons ensemble</h1>
-          <p className="mt-6 text-primary-foreground/85">Une question, un partenariat, un témoignage — nous serions ravis de vous lire.</p>
+          <p className="mt-6 text-[#10284d]/90">Une question, un partenariat, un témoignage — nous serions ravis de vous lire.</p>
         </div>
       </section>
 
@@ -63,7 +63,7 @@ function Contact() {
               { icon: MapPin, label: "Localisation", value: "Cameroun & en ligne" },
             ].map((c) => (
               <Card key={c.label} className="p-5 border-border/60 flex gap-4 items-start">
-                <div className="h-10 w-10 rounded-lg bg-gradient-hero text-primary-foreground inline-flex items-center justify-center shrink-0">
+                <div className="h-10 w-10 rounded-lg bg-gradient-hero text-[#10284d] inline-flex items-center justify-center shrink-0">
                   <c.icon className="h-5 w-5" />
                 </div>
                 <div>

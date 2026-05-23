@@ -11,7 +11,7 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <img src={logo} alt="" className="h-12 w-12 rounded-full ring-2 ring-gold/50" />
             <div>
-              <div className="font-serif text-lg font-semibold">Foundation & Mission School</div>
+              <div className="font-serif text-lg font-semibold">Foundation and Mission School International</div>
               <div className="text-xs uppercase tracking-[0.2em] text-gold">Jesus For All Nations</div>
             </div>
           </div>
@@ -26,6 +26,7 @@ export function Footer() {
           <ul className="space-y-2 text-sm text-primary-foreground/90">
             <li><Link to="/about" className="transition-colors hover:text-gold">À propos</Link></li>
             <li><Link to="/program" className="transition-colors hover:text-gold">Programme</Link></li>
+            <li><Link to="/teachers" className="transition-colors hover:text-gold">Enseignants</Link></li>
             <li><Link to="/modalities" className="transition-colors hover:text-gold">Modalités</Link></li>
             <li><Link to="/register" className="transition-colors hover:text-gold">Inscription</Link></li>
             <li><Link to="/contact" className="transition-colors hover:text-gold">Contact</Link></li>
@@ -44,7 +45,7 @@ export function Footer() {
 
       <div className="relative z-10 border-t border-primary-foreground/20">
         <div className="container mx-auto px-4 md:px-6 py-5 text-xs text-primary-foreground/70 flex flex-col md:flex-row gap-2 items-center justify-between">
-          <p>© {new Date().getFullYear()} Foundation and Mission School. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} Foundation and Mission School International. Tous droits réservés.</p>
           <p className="italic">« Allez, faites de toutes les nations des disciples » — Matt. 28:19</p>
         </div>
       </div>

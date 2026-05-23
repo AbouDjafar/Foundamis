@@ -35,7 +35,7 @@ export const MODULES: Module[] = [
     title: "Restauration & Renouvellement",
     code: "R",
     period: "Mars – Avril 2026",
-    duration: "2 mois",
+    duration: "1 mois",
     languages: "Français & Anglais",
     courses: [
       { code: "R : TSD", title: "Théologie du Saint-Esprit", dates: "07 – 11 Mars" },
@@ -55,7 +55,7 @@ export const MODULES: Module[] = [
     title: "Nouvelle Naissance",
     code: "NN",
     period: "Mai – Juin 2026",
-    duration: "2 mois",
+    duration: "1 mois",
     languages: "Français & Anglais",
     courses: [
       { code: "NN : ON", title: "Origine de la Nouvelle Naissance", dates: "06 – 09 Mai" },
@@ -76,7 +76,7 @@ export const MODULES: Module[] = [
     title: "Formation au Discipulat",
     code: "FD",
     period: "Juillet – Août 2026",
-    duration: "2 mois",
+    duration: "1 mois",
     languages: "Français & Anglais",
     courses: [
       { code: "FD : CD", title: "Concept du Discipulat", dates: "11 – 15 Juillet" },
@@ -95,7 +95,7 @@ export const MODULES: Module[] = [
     title: "Dons & Appels",
     code: "DDA",
     period: "Septembre – Octobre 2026",
-    duration: "2 mois",
+    duration: "1 mois",
     languages: "Français & Anglais",
     courses: [
       { code: "DDA : AP", title: "Appel Pastoral", dates: "05 – 09 Septembre" },
@@ -126,7 +126,7 @@ export const MODULES: Module[] = [
     title: "Formation Finale du Chrétien",
     code: "FFC",
     period: "Décembre 2026 – Janvier 2027",
-    duration: "2 mois",
+    duration: "1 mois",
     languages: "Français & Anglais",
     courses: [
       { code: "FFC : T", title: "Théologie", dates: "02 Décembre" },

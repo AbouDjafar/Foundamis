@@ -11,9 +11,9 @@ import coverAll from "@/assets/cover-all.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "À propos — Foundation and Mission School" },
-      { name: "description", content: "Vision, mission et valeurs de Foundation and Mission School « Jesus For All Nations »." },
-      { property: "og:title", content: "À propos — Foundation and Mission School" },
+      { title: "À propos — Foundation and Mission School International" },
+      { name: "description", content: "Vision, mission et valeurs de Foundation and Mission School International « Jesus For All Nations »." },
+      { property: "og:title", content: "À propos — Foundation and Mission School International" },
       { property: "og:description", content: "Une école biblique au service de la mission auprès de toutes les nations." },
       { property: "og:url", content: "/about" },
     ],
@@ -25,14 +25,14 @@ export const Route = createFileRoute("/about")({
 function About() {
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-primary-foreground py-20 md:py-28">
-        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" width={1920} height={1280} />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/45 to-primary/65" />
+      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-[#10284d] py-20 md:py-28">
+        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1280} />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/12 via-white/8 to-white/16" />
         <div className="relative container mx-auto px-4 md:px-6 text-center max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">À propos</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#10284d] font-semibold">À propos</p>
           <h1 className="mt-4 font-serif text-4xl md:text-6xl font-semibold">Former. Équiper. Envoyer.</h1>
-          <p className="mt-6 text-primary-foreground/85">
-            Foundation and Mission School est une école biblique née d'un appel : préparer une génération
+          <p className="mt-6 text-[#10284d]/90">
+            Foundation and Mission School International est une école biblique née d'un appel : préparer une génération
             de disciples solidement ancrés dans la Parole de Dieu, animés par l'amour de Christ
             et prêts à porter l'Évangile vers toutes les nations.
           </p>
@@ -95,7 +95,7 @@ function About() {
             </div>
             <img
               src={flyerEvangile}
-              alt="Flyer évangélisation Foundation and Mission School"
+              alt="Flyer évangélisation Foundation and Mission School International"
               className="w-full rounded-2xl border border-border/70 shadow-elegant object-cover"
             />
           </div>
@@ -117,7 +117,7 @@ function About() {
               { icon: Compass, title: "Mission", text: "Aller vers ceux qui ne connaissent pas Jésus." },
             ].map((v) => (
               <Card key={v.title} className="p-7 border-border/60 hover:border-gold/40 hover:shadow-soft transition-all">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-hero text-primary-foreground">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-hero text-[#10284d]">
                   <v.icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-5 text-xl font-semibold">{v.title}</h3>

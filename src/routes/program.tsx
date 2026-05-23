@@ -10,7 +10,7 @@ import coverAll from "@/assets/cover-all.jpg";
 export const Route = createFileRoute("/program")({
   head: () => ({
     meta: [
-      { title: "Programme 2026 — 2027 — Foundation and Mission School" },
+      { title: "Programme 2026 — 2027 — Foundation and Mission School International" },
       { name: "description", content: "Découvrez les 7 modules de la formation : Fondation, Restauration, Nouvelle Naissance, Discipulat, Dons, Mission, Envoi. Février 2026 — Janvier 2027." },
       { property: "og:title", content: "Programme 2026 — 2027" },
       { property: "og:description", content: "Sept modules sur douze mois pour devenir un serviteur formé et envoyé." },
@@ -24,15 +24,16 @@ export const Route = createFileRoute("/program")({
 function Program() {
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-primary-foreground py-20 md:py-28">
-        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" width={1920} height={1280} />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/45 to-primary/65" />
+      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-[#10284d] py-20 md:py-28">
+        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1280} />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/12 via-white/8 to-white/16" />
         <div className="relative container mx-auto px-4 md:px-6 text-center max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Programme</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#10284d] font-semibold">Programme</p>
           <h1 className="mt-4 font-serif text-4xl md:text-6xl font-semibold">Une année pour être formé et envoyé</h1>
-          <p className="mt-6 text-primary-foreground/85">
+          <p className="mt-6 text-[#10284d]/90">
             7 modules structurés, du fondement de la foi jusqu'à l'envoi, en français et en anglais.
           </p>
+          <p className="mt-3 text-sm text-[#10284d]/85">Chaque module dure 1 mois et est porte par 2 enseignants.</p>
           <div className="mt-8 inline-flex flex-wrap items-center justify-center gap-6 text-sm">
             <span className="flex items-center gap-2"><CalendarDays className="h-4 w-4 text-gold" /> Fév. 2026 — Jan. 2027</span>
             <span className="flex items-center gap-2"><Clock className="h-4 w-4 text-gold" /> 12 mois</span>
@@ -46,7 +47,7 @@ function Program() {
           <div className="grid gap-8 lg:grid-cols-2 items-center">
             <img
               src={flyerBibleFormation}
-              alt="Flyer Bible Formation Foundation and Mission School"
+              alt="Flyer Bible Formation Foundation and Mission School International"
               className="w-full rounded-xl border border-border/60 object-cover"
             />
             <div>
@@ -89,7 +90,7 @@ function Program() {
                       <span className="font-serif text-3xl md:text-4xl text-primary/30 font-bold w-12 shrink-0">{m.number}</span>
                       <div className="flex-1 min-w-0">
                         <h3 className="text-base md:text-lg font-semibold leading-snug">{m.title}</h3>
-                        <p className="text-xs text-muted-foreground mt-1">{m.period} · {m.duration} · {m.courses.length} cours</p>
+                        <p className="text-xs text-muted-foreground mt-1">{m.period} - {m.duration} - 2 enseignants - {m.courses.length} cours</p>
                       </div>
                       <span className="hidden md:inline text-[10px] uppercase tracking-widest text-gold bg-gold/10 px-2 py-1 rounded shrink-0">
                         Code {m.code}

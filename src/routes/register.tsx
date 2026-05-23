@@ -19,7 +19,7 @@ import coverAll from "@/assets/cover-all.jpg";
 export const Route = createFileRoute("/register")({
   head: () => ({
     meta: [
-      { title: "Inscription — Foundation and Mission School" },
+      { title: "Inscription — Foundation and Mission School International" },
       { name: "description", content: "Inscrivez-vous à la formation 2026-2027, en présentiel ou en ligne." },
       { property: "og:title", content: "Inscription à la formation" },
       { property: "og:description", content: "Formulaire d'inscription — présentiel ou en ligne." },
@@ -98,13 +98,13 @@ function Register() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-primary-foreground py-16 md:py-24">
-        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" width={1920} height={1280} />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/45 to-primary/65" />
+      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-[#10284d] py-16 md:py-24">
+        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1280} />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/12 via-white/8 to-white/16" />
         <div className="relative container mx-auto px-4 md:px-6 text-center max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Inscription</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#10284d] font-semibold">Inscription</p>
           <h1 className="mt-4 font-serif text-4xl md:text-5xl font-semibold">Rejoignez la promotion 2026</h1>
-          <p className="mt-4 text-primary-foreground/85">Complétez le formulaire ci-dessous. Notre équipe vous contactera sous 48h.</p>
+          <p className="mt-4 text-[#10284d]/90">Complétez le formulaire ci-dessous. Notre équipe vous contactera sous 48h.</p>
         </div>
       </section>
 
@@ -195,7 +195,7 @@ function Register() {
 
               <div className="mt-6">
                 <Label className="text-sm font-medium">Modules à suivre</Label>
-                <p className="text-xs text-muted-foreground mt-1">Cochez les modules qui vous intéressent (tous sélectionnés par défaut).</p>
+                <p className="text-xs text-muted-foreground mt-1">Cochez les modules qui vous interessent (tous selectionnes par defaut). Chaque module dure 1 mois et est porte par 2 enseignants.</p>
                 <div className="mt-3 grid gap-2 md:grid-cols-2">
                   {MODULES.map((m) => {
                     const selected = form.watch("modules") ?? [];

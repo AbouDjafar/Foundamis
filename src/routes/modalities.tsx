@@ -11,7 +11,7 @@ import coverAll from "@/assets/cover-all.jpg";
 export const Route = createFileRoute("/modalities")({
   head: () => ({
     meta: [
-      { title: "Modalités & Tarifs — Foundation and Mission School" },
+      { title: "Modalités & Tarifs — Foundation and Mission School International" },
       { name: "description", content: "Formation présentielle ou en ligne. Inscription 25 000 XAF (~42 USD), formation 75 000 XAF (~125 USD). Total 100 000 XAF (~167 USD)." },
       { property: "og:title", content: "Modalités & Tarifs" },
       { property: "og:description", content: "Présentiel ou en ligne — tarifs détaillés." },
@@ -25,13 +25,13 @@ export const Route = createFileRoute("/modalities")({
 function Modalities() {
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-primary-foreground py-20 md:py-28">
-        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" width={1920} height={1280} />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/45 to-primary/65" />
+      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-[#10284d] py-20 md:py-28">
+        <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1280} />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/12 via-white/8 to-white/16" />
         <div className="relative container mx-auto px-4 md:px-6 text-center max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-gold font-semibold">Modalités & Tarifs</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#10284d] font-semibold">Modalités & Tarifs</p>
           <h1 className="mt-4 font-serif text-4xl md:text-6xl font-semibold">Choisissez votre format</h1>
-          <p className="mt-6 text-primary-foreground/85">
+          <p className="mt-6 text-[#10284d]/90">
             Présentiel ou en ligne — même programme, mêmes supports, même certificat.
           </p>
         </div>
@@ -47,7 +47,7 @@ function Modalities() {
               <div className="relative h-48 overflow-hidden">
                 <img src={f.image} alt={f.title} className="h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
-                <div className="absolute bottom-4 left-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-hero text-primary-foreground shadow-gold">
+                <div className="absolute bottom-4 left-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-hero text-[#10284d] shadow-gold">
                   <f.icon className="h-6 w-6" />
                 </div>
               </div>

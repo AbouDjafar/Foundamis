@@ -7,9 +7,17 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  cloudflare: false,
+  tanstackStart: {
+    router: {
+      basepath: process.env.GITHUB_ACTIONS ? "/Foundamis" : "/",
+    },
+    spa: {
+      enabled: true,
+    },
+  },
   vite: {
     // GitHub Actions builds are published to Project Pages at /Foundamis/
     base: process.env.GITHUB_ACTIONS ? "/Foundamis/" : "/",
   },
-  tanstackStart: {},
 });

@@ -1,4 +1,4 @@
-import {
+﻿import {
   Outlet,
   Link,
   createRootRouteWithContext,
@@ -44,9 +44,14 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
         <p className="mt-2 text-sm text-muted-foreground">Une erreur est survenue. Vous pouvez réessayer.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-          >Réessayer</button>
+          >
+            Réessayer
+          </button>
           <a href="/" className="rounded-md border border-input px-4 py-2 text-sm font-medium hover:bg-accent">Accueil</a>
         </div>
       </div>

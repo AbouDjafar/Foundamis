@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+﻿import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.jpg";
@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 
 const links = [
   { to: "/", label: "Accueil" },
-  { to: "/about", label: "A propos" },
+  { to: "/about", label: "À propos" },
   { to: "/program", label: "Programme" },
   { to: "/teachers", label: "Enseignants" },
-  { to: "/modalities", label: "Modalites" },
+  { to: "/modalities", label: "Modalités" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -57,7 +57,7 @@ export function Header() {
 
       {open && (
         <div className="lg:hidden border-t border-border bg-background">
-          <nav className="container mx-auto flex flex-col p-4 gap-1">
+          <nav className="container mx-auto flex flex-col gap-1 p-4">
             {links.map((l) => (
               <Link
                 key={l.to}

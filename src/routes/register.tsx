@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -52,12 +52,18 @@ type FormValues = z.infer<typeof schema>;
 
 function Register() {
   const [success, setSuccess] = useState(false);
-
   const form = useForm<FormValues>({
     resolver: zodResolver(schema),
     defaultValues: {
-      firstName: "", lastName: "", email: "", phone: "",
-      country: "", city: "", birthDate: "", church: "", ministry: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      country: "",
+      city: "",
+      birthDate: "",
+      church: "",
+      ministry: "",
       modules: MODULES.map((m) => m.id),
       motivation: "",
     } as any,
@@ -72,205 +78,112 @@ function Register() {
 
   if (success) {
     return (
-      <section className="container mx-auto px-4 md:px-6 py-24 max-w-2xl text-center">
-        <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-gradient-gold shadow-gold">
-          <CheckCircle2 className="h-10 w-10 text-gold-foreground" />
-        </div>
-        <h1 className="mt-6 font-serif text-3xl md:text-4xl font-semibold">Inscription bien reçue</h1>
-        <p className="mt-4 text-muted-foreground">
-          Merci pour votre engagement. Notre équipe vous contactera sous 48 heures avec
-          les coordonnées de paiement (Mobile Money, virement) et les prochaines étapes.
-        </p>
-        <Card className="mt-8 p-6 text-left bg-gradient-to-br from-card to-accent/30 border-gold/30">
+      <section className="container mx-auto max-w-2xl px-4 py-24 text-center md:px-6">
+        <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-gradient-gold shadow-gold"><CheckCircle2 className="h-10 w-10 text-gold-foreground" /></div>
+        <h1 className="mt-6 font-serif text-3xl font-semibold md:text-4xl">Inscription bien reçue</h1>
+        <p className="mt-4 text-muted-foreground">Merci pour votre engagement. Notre équipe vous contactera sous 48 heures avec les coordonnées de paiement (Mobile Money, virement) et les prochaines étapes.</p>
+        <Card className="mt-8 border-gold/30 bg-gradient-to-br from-card to-accent/30 p-6 text-left">
           <h3 className="font-semibold">Récapitulatif des frais</h3>
           <div className="mt-3 space-y-2 text-sm">
             <div className="flex justify-between"><span>Inscription</span><span>{fmtXAF(FEES.registration.xaf)} (≈ {fmtUSD(FEES.registration.usd)})</span></div>
             <div className="flex justify-between"><span>Formation</span><span>{fmtXAF(FEES.training.xaf)} (≈ {fmtUSD(FEES.training.usd)})</span></div>
-            <div className="flex justify-between font-semibold pt-2 border-t border-border"><span>Total</span><span>{fmtXAF(FEES.total.xaf)} (≈ {fmtUSD(FEES.total.usd)})</span></div>
+            <div className="flex justify-between border-t border-border pt-2 font-semibold"><span>Total</span><span>{fmtXAF(FEES.total.xaf)} (≈ {fmtUSD(FEES.total.usd)})</span></div>
           </div>
         </Card>
-        <Button asChild className="mt-8 bg-gradient-hero text-primary-foreground" size="lg">
-          <Link to="/">Retour à l'accueil</Link>
-        </Button>
+        <Button asChild className="mt-8 bg-gradient-hero text-primary-foreground" size="lg"><Link to="/">Retour à l'accueil</Link></Button>
       </section>
     );
   }
 
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map text-[#10284d] py-16 md:py-24">
+      <section className="relative overflow-hidden bg-gradient-cover-dark bg-world-map py-16 text-[#10284d] md:py-24">
         <img src={coverAll} alt="" className="absolute inset-0 h-full w-full object-cover" width={1920} height={1280} />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/12 via-white/8 to-white/16" />
-        <div className="relative container mx-auto px-4 md:px-6 text-center max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-[#10284d] font-semibold">Inscription</p>
-          <h1 className="mt-4 font-serif text-4xl md:text-5xl font-semibold">Rejoignez la promotion 2026</h1>
-          <p className="mt-4 text-[#10284d]/90">Complétez le formulaire ci-dessous. Notre équipe vous contactera sous 48h.</p>
-        </div>
+        <div className="absolute inset-0 bg-[#e6d3b7]/34" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f2e7d6]/18 via-[#ead8bf]/10 to-white/12" />
+        <div className="relative container mx-auto max-w-3xl px-4 text-center md:px-6"><p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#10284d]">Inscription</p><h1 className="mt-4 font-serif text-4xl font-semibold md:text-5xl">Rejoignez la promotion 2026</h1><p className="mt-4 text-[#10284d]/90">Complétez le formulaire ci-dessous. Notre équipe vous contactera sous 48h.</p></div>
       </section>
 
-      <section className="container mx-auto px-4 md:px-6 py-16">
+      <section className="container mx-auto px-4 py-16 md:px-6">
         <div className="grid gap-10 lg:grid-cols-[1fr_320px]">
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-10">
-            {/* Identité */}
-            <Card className="p-6 md:p-8 border-border/60">
+            <Card className="border-border/60 p-6 md:p-8">
               <h2 className="font-serif text-xl font-semibold">Identité</h2>
               <div className="mt-6 grid gap-5 md:grid-cols-2">
-                <Field label="Prénom" error={form.formState.errors.firstName?.message}>
-                  <Input {...form.register("firstName")} placeholder="Jean" />
-                </Field>
-                <Field label="Nom" error={form.formState.errors.lastName?.message}>
-                  <Input {...form.register("lastName")} placeholder="Dupont" />
-                </Field>
-                <Field label="Email" error={form.formState.errors.email?.message}>
-                  <Input type="email" {...form.register("email")} placeholder="vous@email.com" />
-                </Field>
-                <Field label="Téléphone (WhatsApp)" error={form.formState.errors.phone?.message}>
-                  <Input {...form.register("phone")} placeholder="+237 6XX XX XX XX" />
-                </Field>
-                <Field label="Pays" error={form.formState.errors.country?.message}>
-                  <Input {...form.register("country")} placeholder="Cameroun" />
-                </Field>
-                <Field label="Ville" error={form.formState.errors.city?.message}>
-                  <Input {...form.register("city")} placeholder="Yaoundé" />
-                </Field>
-                <Field label="Date de naissance" error={form.formState.errors.birthDate?.message}>
-                  <Input type="date" {...form.register("birthDate")} />
-                </Field>
+                <Field label="Prénom" error={form.formState.errors.firstName?.message}><Input {...form.register("firstName")} placeholder="Jean" /></Field>
+                <Field label="Nom" error={form.formState.errors.lastName?.message}><Input {...form.register("lastName")} placeholder="Dupont" /></Field>
+                <Field label="Email" error={form.formState.errors.email?.message}><Input type="email" {...form.register("email")} placeholder="vous@email.com" /></Field>
+                <Field label="Téléphone (WhatsApp)" error={form.formState.errors.phone?.message}><Input {...form.register("phone")} placeholder="+237 6XX XX XX XX" /></Field>
+                <Field label="Pays" error={form.formState.errors.country?.message}><Input {...form.register("country")} placeholder="Cameroun" /></Field>
+                <Field label="Ville" error={form.formState.errors.city?.message}><Input {...form.register("city")} placeholder="Yaoundé" /></Field>
+                <Field label="Date de naissance" error={form.formState.errors.birthDate?.message}><Input type="date" {...form.register("birthDate")} /></Field>
                 <Field label="Genre" error={form.formState.errors.gender?.message}>
                   <Select onValueChange={(v) => form.setValue("gender", v as "M" | "F", { shouldValidate: true })}>
                     <SelectTrigger><SelectValue placeholder="Sélectionnez" /></SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="M">Homme</SelectItem>
-                      <SelectItem value="F">Femme</SelectItem>
-                    </SelectContent>
+                    <SelectContent><SelectItem value="M">Homme</SelectItem><SelectItem value="F">Femme</SelectItem></SelectContent>
                   </Select>
                 </Field>
               </div>
             </Card>
 
-            {/* Spirituel */}
-            <Card className="p-6 md:p-8 border-border/60">
+            <Card className="border-border/60 p-6 md:p-8">
               <h2 className="font-serif text-xl font-semibold">Parcours spirituel</h2>
               <div className="mt-6 grid gap-5 md:grid-cols-2">
-                <Field label="Église d'appartenance" error={form.formState.errors.church?.message}>
-                  <Input {...form.register("church")} placeholder="Nom de votre église" />
-                </Field>
-                <Field label="Fonction / ministère (optionnel)" error={form.formState.errors.ministry?.message}>
-                  <Input {...form.register("ministry")} placeholder="Diacre, intercesseur..." />
-                </Field>
+                <Field label="Église d'appartenance" error={form.formState.errors.church?.message}><Input {...form.register("church")} placeholder="Nom de votre église" /></Field>
+                <Field label="Fonction / ministère (optionnel)" error={form.formState.errors.ministry?.message}><Input {...form.register("ministry")} placeholder="Diacre, intercesseur..." /></Field>
               </div>
             </Card>
 
-            {/* Formation */}
-            <Card className="p-6 md:p-8 border-border/60">
+            <Card className="border-border/60 p-6 md:p-8">
               <h2 className="font-serif text-xl font-semibold">Modalités de formation</h2>
-
               <div className="mt-6">
                 <Label className="text-sm font-medium">Mode</Label>
                 <RadioGroup className="mt-3 grid gap-3 md:grid-cols-2" onValueChange={(v) => form.setValue("mode", v as any, { shouldValidate: true })}>
-                  <Label htmlFor="m-pres" className="flex cursor-pointer items-start gap-3 rounded-lg border border-border p-4 hover:border-gold/40 has-[input:checked]:border-gold has-[input:checked]:bg-gold/5">
-                    <RadioGroupItem value="presentiel" id="m-pres" />
-                    <div><div className="font-semibold">Présentiel</div><div className="text-xs text-muted-foreground mt-1">Sur place, en communauté</div></div>
-                  </Label>
-                  <Label htmlFor="m-on" className="flex cursor-pointer items-start gap-3 rounded-lg border border-border p-4 hover:border-gold/40 has-[input:checked]:border-gold has-[input:checked]:bg-gold/5">
-                    <RadioGroupItem value="online" id="m-on" />
-                    <div><div className="font-semibold">En ligne</div><div className="text-xs text-muted-foreground mt-1">Depuis n'importe où</div></div>
-                  </Label>
+                  <Label htmlFor="m-pres" className="flex cursor-pointer items-start gap-3 rounded-lg border border-border p-4 hover:border-gold/40 has-[input:checked]:border-gold has-[input:checked]:bg-gold/5"><RadioGroupItem value="presentiel" id="m-pres" /><div><div className="font-semibold">Présentiel</div><div className="mt-1 text-xs text-muted-foreground">Sur place, en communauté</div></div></Label>
+                  <Label htmlFor="m-on" className="flex cursor-pointer items-start gap-3 rounded-lg border border-border p-4 hover:border-gold/40 has-[input:checked]:border-gold has-[input:checked]:bg-gold/5"><RadioGroupItem value="online" id="m-on" /><div><div className="font-semibold">En ligne</div><div className="mt-1 text-xs text-muted-foreground">Depuis n'importe où</div></div></Label>
                 </RadioGroup>
                 {form.formState.errors.mode && <p className="mt-2 text-xs text-destructive">{form.formState.errors.mode.message}</p>}
               </div>
-
               <div className="mt-6">
                 <Label className="text-sm font-medium">Langue préférée</Label>
                 <RadioGroup className="mt-3 flex gap-3" onValueChange={(v) => form.setValue("language", v as any, { shouldValidate: true })}>
-                  <Label htmlFor="l-fr" className="flex cursor-pointer items-center gap-2 rounded-lg border border-border px-4 py-3 hover:border-gold/40 has-[input:checked]:border-gold has-[input:checked]:bg-gold/5">
-                    <RadioGroupItem value="fr" id="l-fr" /> Français
-                  </Label>
-                  <Label htmlFor="l-en" className="flex cursor-pointer items-center gap-2 rounded-lg border border-border px-4 py-3 hover:border-gold/40 has-[input:checked]:border-gold has-[input:checked]:bg-gold/5">
-                    <RadioGroupItem value="en" id="l-en" /> English
-                  </Label>
+                  <Label htmlFor="l-fr" className="flex cursor-pointer items-center gap-2 rounded-lg border border-border px-4 py-3 hover:border-gold/40 has-[input:checked]:border-gold has-[input:checked]:bg-gold/5"><RadioGroupItem value="fr" id="l-fr" /> Français</Label>
+                  <Label htmlFor="l-en" className="flex cursor-pointer items-center gap-2 rounded-lg border border-border px-4 py-3 hover:border-gold/40 has-[input:checked]:border-gold has-[input:checked]:bg-gold/5"><RadioGroupItem value="en" id="l-en" /> English</Label>
                 </RadioGroup>
                 {form.formState.errors.language && <p className="mt-2 text-xs text-destructive">{form.formState.errors.language.message}</p>}
               </div>
-
               <div className="mt-6">
                 <Label className="text-sm font-medium">Modules à suivre</Label>
-                <p className="text-xs text-muted-foreground mt-1">Cochez les modules qui vous interessent (tous selectionnes par defaut). Chaque module dure 1 mois et est porte par 2 enseignants.</p>
+                <p className="mt-1 text-xs text-muted-foreground">Cochez les modules qui vous intéressent. Chaque module dure 1 mois et est porté par 2 enseignants.</p>
                 <div className="mt-3 grid gap-2 md:grid-cols-2">
                   {MODULES.map((m) => {
                     const selected = form.watch("modules") ?? [];
                     const checked = selected.includes(m.id);
-                    return (
-                      <Label key={m.id} className="flex items-start gap-3 rounded-lg border border-border p-3 cursor-pointer hover:border-gold/40">
-                        <Checkbox
-                          checked={checked}
-                          onCheckedChange={(v) => {
-                            const next = v ? [...selected, m.id] : selected.filter((x) => x !== m.id);
-                            form.setValue("modules", next, { shouldValidate: true });
-                          }}
-                        />
-                        <div className="text-sm">
-                          <div className="font-medium">Mod. {m.number} — {m.title}</div>
-                          <div className="text-xs text-muted-foreground">{m.period}</div>
-                        </div>
-                      </Label>
-                    );
+                    return <Label key={m.id} className="flex cursor-pointer items-start gap-3 rounded-lg border border-border p-3 hover:border-gold/40"><Checkbox checked={checked} onCheckedChange={(v) => form.setValue("modules", v ? [...selected, m.id] : selected.filter((x) => x !== m.id), { shouldValidate: true })} /><div className="text-sm"><div className="font-medium">Mod. {m.number} — {m.title}</div><div className="text-xs text-muted-foreground">{m.period}</div></div></Label>;
                   })}
                 </div>
                 {form.formState.errors.modules && <p className="mt-2 text-xs text-destructive">{form.formState.errors.modules.message as string}</p>}
               </div>
-
-              <Field label="Motivation" error={form.formState.errors.motivation?.message} className="mt-6">
-                <Textarea rows={5} {...form.register("motivation")} placeholder="Parlez-nous de votre appel et de vos attentes vis-à-vis de la formation..." maxLength={1000} />
-              </Field>
-
+              <Field label="Motivation" error={form.formState.errors.motivation?.message} className="mt-6"><Textarea rows={5} {...form.register("motivation")} placeholder="Parlez-nous de votre appel et de vos attentes vis-à-vis de la formation..." maxLength={1000} /></Field>
               <div className="mt-6">
-                <Label className="flex items-start gap-3 cursor-pointer">
-                  <Checkbox
-                    onCheckedChange={(v) => form.setValue("consent", v === true ? true : (false as any), { shouldValidate: true })}
-                  />
-                  <span className="text-sm text-muted-foreground">
-                    J'accepte que mes données soient utilisées pour traiter mon inscription et confirme la véracité des informations fournies.
-                  </span>
-                </Label>
+                <Label className="flex cursor-pointer items-start gap-3"><Checkbox onCheckedChange={(v) => form.setValue("consent", v === true ? true : (false as any), { shouldValidate: true })} /><span className="text-sm text-muted-foreground">J'accepte que mes données soient utilisées pour traiter mon inscription et confirme la véracité des informations fournies.</span></Label>
                 {form.formState.errors.consent && <p className="mt-2 text-xs text-destructive">{form.formState.errors.consent.message as string}</p>}
               </div>
             </Card>
-
-            <Button type="submit" size="lg" className="w-full md:w-auto bg-gradient-gold text-gold-foreground hover:opacity-90 shadow-gold">
-              Valider mon inscription <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Button type="submit" size="lg" className="w-full bg-gradient-gold text-gold-foreground shadow-gold hover:opacity-90 md:w-auto">Valider mon inscription <ArrowRight className="ml-2 h-4 w-4" /></Button>
           </form>
 
-          <aside className="lg:sticky lg:top-24 h-fit">
-            <Card className="p-6 border-gold/30 bg-gradient-to-br from-card to-accent/30 shadow-elegant">
+          <aside className="h-fit lg:sticky lg:top-24">
+            <Card className="border-gold/30 bg-gradient-to-br from-card to-accent/30 p-6 shadow-elegant">
               <h3 className="font-serif text-lg font-semibold">Récapitulatif des frais</h3>
               <div className="mt-5 space-y-3 text-sm">
-                <div className="flex justify-between border-b border-border pb-2">
-                  <span>Inscription</span>
-                  <span className="font-semibold">{fmtXAF(FEES.registration.xaf)}</span>
-                </div>
-                <div className="flex justify-between text-xs text-muted-foreground -mt-2">
-                  <span></span><span>≈ {fmtUSD(FEES.registration.usd)}</span>
-                </div>
-                <div className="flex justify-between border-b border-border pb-2">
-                  <span>Formation</span>
-                  <span className="font-semibold">{fmtXAF(FEES.training.xaf)}</span>
-                </div>
-                <div className="flex justify-between text-xs text-muted-foreground -mt-2">
-                  <span></span><span>≈ {fmtUSD(FEES.training.usd)}</span>
-                </div>
-                <div className="flex justify-between pt-3">
-                  <span className="font-semibold">Total</span>
-                  <div className="text-right">
-                    <div className="font-serif text-xl font-bold text-gold">{fmtXAF(FEES.total.xaf)}</div>
-                    <div className="text-xs text-muted-foreground">≈ {fmtUSD(FEES.total.usd)}</div>
-                  </div>
-                </div>
+                <div className="flex justify-between border-b border-border pb-2"><span>Inscription</span><span className="font-semibold">{fmtXAF(FEES.registration.xaf)}</span></div>
+                <div className="-mt-2 flex justify-between text-xs text-muted-foreground"><span></span><span>≈ {fmtUSD(FEES.registration.usd)}</span></div>
+                <div className="flex justify-between border-b border-border pb-2"><span>Formation</span><span className="font-semibold">{fmtXAF(FEES.training.xaf)}</span></div>
+                <div className="-mt-2 flex justify-between text-xs text-muted-foreground"><span></span><span>≈ {fmtUSD(FEES.training.usd)}</span></div>
+                <div className="flex justify-between pt-3"><span className="font-semibold">Total</span><div className="text-right"><div className="font-serif text-xl font-bold text-gold">{fmtXAF(FEES.total.xaf)}</div><div className="text-xs text-muted-foreground">≈ {fmtUSD(FEES.total.usd)}</div></div></div>
               </div>
-              <p className="mt-5 text-xs text-muted-foreground">
-                Paiement à confirmer après inscription (Mobile Money, virement). Échelonnement possible.
-              </p>
+              <p className="mt-5 text-xs text-muted-foreground">Paiement à confirmer après inscription (Mobile Money, virement). Échelonnement possible.</p>
             </Card>
           </aside>
         </div>
@@ -280,11 +193,5 @@ function Register() {
 }
 
 function Field({ label, error, children, className }: { label: string; error?: string; children: React.ReactNode; className?: string }) {
-  return (
-    <div className={className}>
-      <Label className="text-sm font-medium">{label}</Label>
-      <div className="mt-2">{children}</div>
-      {error && <p className="mt-1 text-xs text-destructive">{error}</p>}
-    </div>
-  );
+  return <div className={className}><Label className="text-sm font-medium">{label}</Label><div className="mt-2">{children}</div>{error && <p className="mt-1 text-xs text-destructive">{error}</p>}</div>;
 }

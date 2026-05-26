@@ -10,7 +10,7 @@ import pillarDiscipulat from "@/assets/pillar-discipulat.jpg";
 import pillarMission from "@/assets/pillar-mission.jpg";
 import flyerEvangile from "@/assets/flyer-evangile.jpg";
 import handsLight from "@/assets/hands-light.jpg";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
 import { MODULES, FEES, fmtXAF, fmtUSD } from "@/lib/program-data";
 
 export const Route = createFileRoute("/")({

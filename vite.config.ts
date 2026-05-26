@@ -9,11 +9,15 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 export default defineConfig({
   cloudflare: false,
   tanstackStart: {
+    prerender: {
+      failOnError: false,
+    },
     router: {
       basepath: process.env.GITHUB_ACTIONS ? "/Foundamis" : "/",
     },
     spa: {
       enabled: true,
+      maskPath: "/_shell",
     },
   },
   vite: {
